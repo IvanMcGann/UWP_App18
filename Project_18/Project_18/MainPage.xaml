@@ -8,6 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin ="0 10 0 0">
+            <SplitView.Pane>
+                <StackPanel Background ="Gray">
+                    <Button x:Name ="btnShowPane" FontFamily="Segoe MDL2 Assets" Content ="&#xF00F;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name ="Search_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE71E;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
+                        <TextBlock Text="Search" FontSize="15" VerticalAlignment = "Center"/>
+                        
+                    </StackPanel>
 
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name ="Favourite_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE734;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
+                        <TextBlock Text="Favourites" FontSize="15" VerticalAlignment = "Center"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name ="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE713;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
+                        <TextBlock Text="Settings" FontSize="15" VerticalAlignment = "Center"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
     </Grid>
 </Page>
