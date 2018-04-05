@@ -26,5 +26,23 @@ namespace Project_18
         {
             this.InitializeComponent();
         }
+
+        private void btnShowPane_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+
+            if (MySplitView.IsPaneOpen == false)
+            {
+                MySplitView.IsPaneOpen = true;
+                btnShowPane.Content = "\uF00F";
+            }
+
+            else
+            {
+                MySplitView.IsPaneOpen = false;
+                btnShowPane.Content = "\uE00F";
+            }
+                
+        }
     }
 }
