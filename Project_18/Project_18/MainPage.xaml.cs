@@ -29,12 +29,12 @@ namespace Project_18
 
         private void btnShowPane_Click(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+           // MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
 
             if (MySplitView.IsPaneOpen == false)
             {
                 MySplitView.IsPaneOpen = true;
-                btnShowPane.Content = "\uF00F";
+                btnShowPane.Content = "\uE00F";
             }
 
             else
