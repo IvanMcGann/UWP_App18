@@ -53,7 +53,7 @@ namespace Project_18
 
             string id = await AppointmentManager.ShowAddAppointmentAsync(appointment, rect, Placement.Default);
             if (string.IsNullOrEmpty(id))
-                Show("Appointment nod Added", "AppointmentApp");
+                Show("Appointment not Added", "AppointmentApp");
             else
                 Show(string.Format("Appointment added", id), "Appointment App");
 
