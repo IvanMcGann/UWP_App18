@@ -29,10 +29,37 @@
                         <Button x:Name ="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE713;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
                         <TextBlock Text="Settings" FontSize="15" VerticalAlignment = "Center"/>
 
+                        <TextBlock Margin="10" Text="Start:" />
+                        <DatePicker Name= "StartDate" Margin="5" />
+                        <TimePicker Name= "StartTime" Margin="5" />
+                        <TextBlock Margin="10" Text="Subject: " />
+                        <TextBox Name="Subject" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                        <TextBlock Margin="10" Text="Location:" />
+                        <TextBox Name="Location" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                        <TextBlock Margin="10" Text="Details:" />
+                        <TextBox Name= "Details" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                        <ComboBox x:Name="Duration" SelectedIndex= "0">
+                            <ComboBoxItem Tag="30" Content="30 minutes"/>
+                            <ComboBoxItem Tag="60" Content="1 Hour"/>
+                        </ComboBox>
+
+                        <CheckBox Name="AllDay" Content="All Day" Margin="10"/>
+
+                       
+
                     </StackPanel>
 
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Name="New" Icon="Page" Label ="New" Click="New_Click" />
+                <AppBarButton Name="Add" Icon="Add" Label ="Add" Click="Add_Click" />
+                <AppBarButton Name="Calendar" Icon="Calendar" Label ="Calendar" Click="Calendar_Click" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>

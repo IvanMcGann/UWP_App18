@@ -22,6 +22,9 @@ namespace Project_18
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Library lib = new Library();
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -44,5 +47,22 @@ namespace Project_18
             }
                 
         }
+
+        private void New_Click (object sender, RoutedEventArgs e)
+        {
+            lib.New(StartDate, StartTime, Subject, Location, Details, Duration, AllDay);
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            lib.Add(sender, StartDate, StartTime, Subject, Location, Details, Duration, AllDay);
+        }
+
+        private void Calendar_Click(object sender, RoutedEventArgs e)
+        {
+            lib.Calendar(StartDate, StartTime);
+        }
+
+
     }
 }
