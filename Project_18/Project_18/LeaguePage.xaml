@@ -32,9 +32,9 @@
             </SplitView.Pane>
         </SplitView>
 
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Background="DarkSlateGray">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Background="DarkSlateGray" BorderBrush="White" BorderThickness="2">
 
-            <Grid>
+            <Grid BorderBrush="White" BorderThickness="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
