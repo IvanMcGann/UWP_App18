@@ -39,26 +39,16 @@
                     
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name ="Search_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE71E;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
-                        <TextBlock Text="Search" FontSize="15" VerticalAlignment = "Center"/>
+                        <TextBlock Text="Finishes" FontSize="15" VerticalAlignment = "Center"/>
                         
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Button x:Name ="Favourite_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE734;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
-                        <TextBlock Text="Favourites" FontSize="15" VerticalAlignment = "Center"/>
+                        <Button x:Name ="League_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE8F3;" Width ="50" Height="50" Background="Transparent" Click="btnLeaguePane_Click"/>
+                        <TextBlock Text="League" FontSize="15" VerticalAlignment = "Center"/>
 
                     </StackPanel>
-
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name ="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE713;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
-                        <TextBlock Text="Settings" FontSize="15" VerticalAlignment = "Center"/>
-                    </StackPanel>
-
-
-                
-
-
-
+                   
                 </StackPanel>
                 
                 

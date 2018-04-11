@@ -14,19 +14,16 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Project_18
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class LeaguePage : Page
     {
-        public Library lib = new Library();
-
-
-        public MainPage()
+        public LeaguePage()
         {
             this.InitializeComponent();
         }
@@ -42,14 +39,19 @@ namespace Project_18
             var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
             var titleBar = appView.TitleBar;
             titleBar.BackgroundColor = Colors.DarkSlateGray;
-            titleBar.ForegroundColor = Colors.White;
+            titleBar.ForegroundColor = Colors.GreenYellow;
             titleBar.ButtonBackgroundColor = Colors.DarkSlateGray;
-            titleBar.ButtonForegroundColor = Colors.White;
+            titleBar.ButtonForegroundColor = Colors.Red;
+        }
+
+        public void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void btnShowPane_Click(object sender, RoutedEventArgs e)
         {
-           // MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+            // MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
 
             if (MySplitView.IsPaneOpen == false)
             {
@@ -64,29 +66,7 @@ namespace Project_18
             }
 
 
-                
+
         }
-
-        private void New_Click (object sender, RoutedEventArgs e)
-        {
-            lib.New(StartDate, StartTime, Subject, Location, Details, Duration, AllDay);
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            lib.Add(sender, StartDate, StartTime, Subject, Location, Details, Duration, AllDay);
-        }
-
-        private void Calendar_Click(object sender, RoutedEventArgs e)
-        {
-            lib.Calendar(StartDate, StartTime);
-        }
-
-        public void btnLeaguePane_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LeaguePage));
-        }
-
-
     }
 }
