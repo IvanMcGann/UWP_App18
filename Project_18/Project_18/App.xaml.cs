@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -39,7 +40,12 @@ namespace Project_18
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
+            SetBackGroundTitleBar();
+
 #if DEBUG
+
+
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 this.DebugSettings.EnableFrameRateCounter = true;
@@ -77,6 +83,17 @@ namespace Project_18
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+        }
+
+        private void SetBackGroundTitleBar()
+        {
+            var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            var titleBar = appView.TitleBar;
+            titleBar.BackgroundColor = Colors.Black;
+            titleBar.ForegroundColor = Colors.GreenYellow;
+            titleBar.ButtonBackgroundColor = Colors.Black;
+            titleBar.ButtonForegroundColor = Colors.Red;
+
         }
 
         /// <summary>

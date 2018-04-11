@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,6 +29,22 @@ namespace Project_18
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            SetBackGroundTitleBar();
+        }
+
+        private void SetBackGroundTitleBar()
+        {
+            var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            var titleBar = appView.TitleBar;
+            titleBar.BackgroundColor = Colors.DarkSlateGray;
+            titleBar.ForegroundColor = Colors.GreenYellow;
+            titleBar.ButtonBackgroundColor = Colors.DarkSlateGray;
+            titleBar.ButtonForegroundColor = Colors.Red;
         }
 
         private void btnShowPane_Click(object sender, RoutedEventArgs e)

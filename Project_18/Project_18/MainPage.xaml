@@ -8,9 +8,33 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image Source="Assets/darts-wallpaper.jpg" Stretch="Fill" Opacity="0.9"></Image>
         <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin ="0 10 0 0">
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="390" Background="DarkSlateGray">
+               
+                
+
+                <TextBlock Margin="10" Text="Start:" Foreground="WhiteSmoke"/>
+                <DatePicker Name= "StartDate"  Margin="15" Foreground="WhiteSmoke"/>
+                <TimePicker Name= "StartTime" Margin="12" Foreground="WhiteSmoke"/>
+                <TextBlock Margin="10" Text="Subject: " Foreground="WhiteSmoke"/>
+                <TextBox Name="Subject" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                <TextBlock Margin="10" Text="Location:" Foreground="WhiteSmoke"/>
+                <TextBox Name="Location" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                <TextBlock Margin="10" Text="Details:" Foreground="WhiteSmoke"/>
+                <TextBox Name= "Details" Width="300" MaxLength = "225" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="Duration" SelectedIndex= "0" Foreground="WhiteSmoke">
+                    <ComboBoxItem Tag="30" Content="30 minutes"/>
+                    <ComboBoxItem Tag="60" Content="1 Hour"/>
+                </ComboBox>
+
+                <CheckBox Name="AllDay" Content="All Day" Margin="20" Foreground="WhiteSmoke"/>
+
+            </StackPanel>
+
             <SplitView.Pane>
-                <StackPanel Background ="Gray">
+                <StackPanel Background ="DarkSlateGray" >
                     <Button x:Name ="btnShowPane" FontFamily="Segoe MDL2 Assets" Content ="&#xE00F;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
                     
                     <StackPanel Orientation="Horizontal">
@@ -28,33 +52,21 @@
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name ="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE713;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
                         <TextBlock Text="Settings" FontSize="15" VerticalAlignment = "Center"/>
-
-                        <TextBlock Margin="10" Text="Start:" />
-                        <DatePicker Name= "StartDate" Margin="5" />
-                        <TimePicker Name= "StartTime" Margin="5" />
-                        <TextBlock Margin="10" Text="Subject: " />
-                        <TextBox Name="Subject" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
-                        <TextBlock Margin="10" Text="Location:" />
-                        <TextBox Name="Location" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
-                        <TextBlock Margin="10" Text="Details:" />
-                        <TextBox Name= "Details" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
-                        <ComboBox x:Name="Duration" SelectedIndex= "0">
-                            <ComboBoxItem Tag="30" Content="30 minutes"/>
-                            <ComboBoxItem Tag="60" Content="1 Hour"/>
-                        </ComboBox>
-
-                        <CheckBox Name="AllDay" Content="All Day" Margin="10"/>
-
-                       
-
                     </StackPanel>
 
+
+                
+
+
+
                 </StackPanel>
+                
+                
             </SplitView.Pane>
         </SplitView>
     </Grid>
     <Page.BottomAppBar>
-        <AppBar IsOpen="True" IsSticky="True">
+        <AppBar IsOpen="True" IsSticky="True" Background="DarkSlateGray">
             <StackPanel Orientation="Horizontal">
                 <AppBarButton Name="New" Icon="Page" Label ="New" Click="New_Click" />
                 <AppBarButton Name="Add" Icon="Add" Label ="Add" Click="Add_Click" />
