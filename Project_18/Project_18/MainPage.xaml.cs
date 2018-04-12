@@ -82,9 +82,9 @@ namespace Project_18
             lib.Calendar(StartDate, StartTime);
         }
 
-        public void btnLeaguePane_Click(object sender, RoutedEventArgs e)
+        public void btnScorePane_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(LeaguePage));
+            Frame.Navigate(typeof(ScorePage));
         }
 
 
