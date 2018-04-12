@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.ApplicationModel.Appointments;
 using Windows.Foundation;
 using Windows.UI.Popups;
@@ -53,9 +49,9 @@ namespace Project_18
 
             string id = await AppointmentManager.ShowAddAppointmentAsync(appointment, rect, Placement.Default);
             if (string.IsNullOrEmpty(id))
-                Show("Appointment not Added", "AppointmentApp");
+                Show("Booking not Added", "Dart App");
             else
-                Show(string.Format("Appointment added", id), "Appointment App");
+                Show(string.Format("Booking added", id), "Dart App");
 
         }
 
