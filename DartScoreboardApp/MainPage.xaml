@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="DartScoreboardApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DartScoreboardApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image Source="Assets/darts-wallpaper.jpg" Stretch="Fill" Opacity="0.9"></Image>
+        <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin ="0 10 0 0">
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="340" Background="DarkSlateGray">
+
+
+
+                <TextBlock Margin="10" Text="Start:" Foreground="WhiteSmoke"/>
+                <DatePicker Name= "StartDate"  Margin="15" Foreground="WhiteSmoke"/>
+                <TimePicker Name= "StartTime" Margin="12" Foreground="WhiteSmoke"/>
+                <TextBlock Margin="10" Text="Subject: " Foreground="WhiteSmoke"/>
+                <TextBox Name="Subject" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                <TextBlock Margin="10" Text="Location:" Foreground="WhiteSmoke"/>
+                <TextBox Name="Location" Width="300" MaxLength = "225" HorizontalAlignment="Left" />
+                <TextBlock Margin="10" Text="Details:" Foreground="WhiteSmoke"/>
+                <TextBox Name= "Details" Width="300" MaxLength = "225" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="Duration" SelectedIndex= "0" Foreground="WhiteSmoke">
+                    <ComboBoxItem Tag="30" Content="30 minutes"/>
+                    <ComboBoxItem Tag="60" Content="1 Hour"/>
+                </ComboBox>
+
+                <CheckBox Name="AllDay" Content="All Day" Margin="20" Foreground="WhiteSmoke"/>
+
+            </StackPanel>
+
+            <SplitView.Pane>
+                <StackPanel Background ="DarkSlateGray" >
+                    <Button x:Name ="btnShowPane" FontFamily="Segoe MDL2 Assets" Content ="&#xE00F;" Width ="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name ="Score_Menu" FontFamily="Segoe MDL2 Assets" Content ="&#xE8F3;" Width ="50" Height="50" Background="Transparent" Click="btnScorePane_Click"/>
+                        <TextBlock Text="Scoreboard" FontSize="15" VerticalAlignment = "Center"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True" Background="DarkSlateGray">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Name="New" Icon="Page" Label ="New" Click="New_Click" />
+                <AppBarButton Name="Add" Icon="Add" Label ="Add" Click="Add_Click" />
+                <AppBarButton Name="Calendar" Icon="Calendar" Label ="Calendar" Click="Calendar_Click" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
