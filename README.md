@@ -37,17 +37,17 @@ The app is designed to be used create appointment in the windows platform to pre
 I cannot say that I feel I have learned a lot in the last few months doing C# programming and using xaml in the labs as those were basic and not very relatable to a project and doing an app with unique design principles. So when I wanted to create something I had to try attempt it myself rather than reference work previously done. Haven't been able to understand much in the way off error handling either. I'd prefer to stay working on apps while I have access to developers account through the Microsoft azure package for students.   
 <br>
 <br>
-## Software/Links Used:
-XAML
-C#
-Microsoft Developers Account
-Windows Certification Kit
-Visual Studio 2015
-UWP Visual Assets Generator
-Github
-NuGet Tools
-Windows Store App Packages
-Privacy Policy (via google sites)
+## Software/Links Used:<br>
+* XAML
+* C#
+* Microsoft Developers Account
+* Windows Certification Kit
+* Visual Studio 2015
+* UWP Visual Assets Generator
+* Github
+* NuGet Tools
+* Windows Store App Packages
+* Privacy Policy (via google sites)
 
 <br><br>
 https://stackoverflow.com
